@@ -9,14 +9,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
     <style>
-        *{
+        * {
             font-family: 'Poppins', sans-serif;
         }
 
-        body{
+        body {
             min-height: 100vh;
             background: linear-gradient(135deg, #0f172a, #1e293b);
             display: flex;
@@ -25,51 +26,51 @@
             padding: 30px;
         }
 
-        .main-card{
+        .main-card {
             width: 100%;
             max-width: 600px;
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(15px);
             border-radius: 25px;
             padding: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
             color: white;
         }
 
-        .title{
+        .title {
             font-size: 38px;
             font-weight: 700;
             text-align: center;
             margin-bottom: 10px;
         }
 
-        .subtitle{
+        .subtitle {
             text-align: center;
             color: #cbd5e1;
             margin-bottom: 35px;
         }
 
-        .form-control{
+        .form-control {
             height: 60px;
             border-radius: 15px;
             border: none;
             padding-left: 20px;
             font-size: 16px;
-            background: rgba(255,255,255,0.12);
+            background: rgba(255, 255, 255, 0.12);
             color: white;
         }
 
-        .form-control::placeholder{
+        .form-control::placeholder {
             color: #cbd5e1;
         }
 
-        .form-control:focus{
+        .form-control:focus {
             box-shadow: none;
-            background: rgba(255,255,255,0.18);
+            background: rgba(255, 255, 255, 0.18);
             color: white;
         }
 
-        .generate-btn{
+        .generate-btn {
             width: 100%;
             height: 58px;
             border: none;
@@ -81,25 +82,25 @@
             transition: 0.3s;
         }
 
-        .generate-btn:hover{
+        .generate-btn:hover {
             transform: translateY(-2px);
             opacity: 0.9;
         }
 
-        .qr-box{
+        .qr-box {
             margin-top: 35px;
             text-align: center;
         }
 
-        .qr-box img{
+        .qr-box img {
             width: 260px;
             padding: 15px;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
 
-        .download-btn{
+        .download-btn {
             display: inline-block;
             margin-top: 20px;
             padding: 12px 28px;
@@ -111,8 +112,26 @@
             transition: 0.3s;
         }
 
-        .download-btn:hover{
+        .download-btn:hover {
             background: #16a34a;
+        }
+
+        .copy-btn {
+            width: 100%;
+            height: 55px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 15px;
+            font-size: 17px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            transition: 0.3s;
+        }
+
+        .copy-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -133,11 +152,11 @@
 
         <div class="mb-4">
             <input
-                type="text"
-                name="qr_text"
-                class="form-control"
-                placeholder="Enter text or URL..."
-                required
+                    type="text"
+                    name="qr_text"
+                    class="form-control"
+                    placeholder="Enter text or URL..."
+                    required
             >
         </div>
 
@@ -150,15 +169,15 @@
     </form>
 
     {% if qr %}
-    <div class="qr-box">
-        <img src="{{ qr }}" alt="QR Code">
+        <div class="qr-box">
+            <img src="{{ qr }}" alt="QR Code">
 
-        <br>
+            <br>
 
-        <a href="{{ qr }}" download class="download-btn">
-            Download QR
-        </a>
-    </div>
+            <a href="{{ qr }}" download class="download-btn">
+                Download QR
+            </a>
+        </div>
     {% endif %}
 
 </div>
